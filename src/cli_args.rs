@@ -5,7 +5,7 @@ use clap_verbosity_flag::Verbosity;
 #[command(version, about, long_about = None)]
 pub struct Arguments {
     #[arg(short, long)]
-    pub port: Option<u64>,
+    pub port: Option<u16>,
 
     #[command(flatten)]
     pub verbose: Verbosity,

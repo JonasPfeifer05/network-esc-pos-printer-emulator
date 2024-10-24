@@ -3,6 +3,7 @@ mod cli_args;
 
 use crate::app::App;
 
-fn main() {
-    App::initialized().run();
+#[tokio::main]
+async fn main() -> anyhow::Result<()> {
+    App::initialized().run().await
 }
